@@ -31,7 +31,7 @@ export default function Hero() {
                         Get in touch
                     </Link>
                     <Link
-                        href="/resume.pdf"
+                        href="/cv"
                         className="inline-flex w-44 items-center justify-center rounded-full border border-white/20 px-6 py-3 font-ui text-sm font-medium text-text-body transition hover:border-pink/60 hover:bg-white/5 hover:text-pink"
                     >
                         View my resume

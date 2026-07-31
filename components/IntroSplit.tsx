@@ -36,14 +36,14 @@ export default function IntroSplit() {
                     </div>
                 </div>
 
-                <div className="relative mx-auto w-full max-w-md">
+                <div className="relative mx-auto w-full max-w-[33.6rem]">
                     <div className="absolute -inset-4 rounded-[2rem] border border-white/10 bg-white/5 blur-2xl" />
                     <div className="relative rotate-[-4deg] overflow-hidden rounded-[2rem] border border-white/10 bg-[#141414] shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
                         <Image
                             src="/images/profile.jpg"
                             alt="Placeholder profile portrait"
-                            width={720}
-                            height={900}
+                            width={864}
+                            height={1080}
                             unoptimized
                             className="h-auto w-full object-cover"
                         />
