@@ -4,7 +4,6 @@ const navItems = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "CV", href: "/cv.pdf" },
-    { label: "Resume", href: "/resume.pdf" },
 ];
 
 export default function Nav() {
@@ -16,17 +15,17 @@ export default function Nav() {
             >
                 <Link
                     href="/"
-                    className="font-ui text-sm font-medium tracking-[0.25em] text-mint uppercase transition hover:text-pink"
+                    className="font-ui text-sm font-medium italic tracking-[0.12em] text-mint transition hover:text-pink"
                 >
-                    BYAQUTA BIDHEYA BEHERA
+                    Sic Parvis Magna!
                 </Link>
 
-                <div className="flex flex-wrap items-center justify-end gap-2 text-sm font-medium text-text-body sm:gap-3">
+                <div className="flex flex-wrap items-center justify-end gap-3 text-sm font-medium text-text-body sm:gap-4 lg:gap-5">
                     {navItems.map((item) => (
                         <Link
                             key={item.label}
                             href={item.href}
-                            className="rounded-full border border-white/10 px-4 py-2 font-ui transition hover:border-pink/60 hover:bg-white/5 hover:text-pink"
+                            className="rounded-full border border-white/10 px-4 py-2 font-ui transition hover:border-pink/60 hover:bg-white/5 hover:text-pink sm:px-5"
                         >
                             {item.label}
                         </Link>

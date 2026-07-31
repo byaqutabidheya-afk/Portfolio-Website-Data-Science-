@@ -44,7 +44,7 @@ export default function Home() {
       </section>
 
       <section className="py-24 sm:py-28 lg:py-32">
-        <Footer />
+        <Footer shiftLinkedInCta />
       </section>
     </main>
   );

@@ -7,7 +7,11 @@ const socialLinks = [
     { label: "Email", href: "mailto:hello@example.com", icon: Mail },
 ];
 
-export default function Footer() {
+type FooterProps = {
+    shiftLinkedInCta?: boolean;
+};
+
+export default function Footer({ shiftLinkedInCta = false }: FooterProps) {
     return (
         <footer className="px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
             <div className="mx-auto flex w-full max-w-5xl flex-col items-center text-center">
@@ -28,7 +32,7 @@ export default function Footer() {
                     </Link>
                     <Link
                         href="https://www.linkedin.com/"
-                        className="inline-flex w-48 items-center justify-center rounded-full border border-white/20 px-6 py-3 font-ui text-sm font-medium text-text-body transition hover:border-pink/60 hover:bg-white/5 hover:text-pink"
+                        className={`inline-flex w-48 items-center justify-center rounded-full border border-white/20 px-6 py-3 font-ui text-sm font-medium text-text-body transition hover:border-pink/60 hover:bg-white/5 hover:text-pink ${shiftLinkedInCta ? "sm:-translate-x-[94px]" : ""}`}
                     >
                         Connect on LinkedIn
                     </Link>
