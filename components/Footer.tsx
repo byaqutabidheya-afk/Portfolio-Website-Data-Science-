@@ -3,10 +3,11 @@ import { ExternalLink, FolderGit, Mail } from "lucide-react";
 import AchievementsSection from "./AchievementsSection";
 
 const socialLinks = [
-    { label: "GitHub", href: "https://github.com/", icon: FolderGit },
-    { label: "LinkedIn", href: "https://www.linkedin.com/", icon: ExternalLink },
+    { label: "GitHub", tooltip: "GitHub", href: "https://github.com/", icon: FolderGit },
+    { label: "LinkedIn", tooltip: "LinkedIn", href: "https://www.linkedin.com/", icon: ExternalLink },
     {
         label: "Email",
+        tooltip: "Gmail",
         href: "https://mail.google.com/mail/?view=cm&fs=1&to=byaqutabidheya@gmail.com",
         icon: Mail,
     },
@@ -41,7 +42,7 @@ export default function Footer({ variant = "achievements" }: FooterProps) {
                             </Link>
                             <Link
                                 href="https://www.linkedin.com/"
-                                className="inline-flex w-48 items-center justify-center rounded-full border border-white/20 px-6 py-3 font-ui text-sm font-medium text-text-body transition hover:border-pink/60 hover:bg-white/5 hover:text-pink"
+                                className="inline-flex w-48 items-center justify-center rounded-full border border-white/20 px-6 py-3 font-ui text-sm font-medium text-text-body transition hover:border-pink/60 hover:bg-white/5 hover:text-pink sm:-translate-x-[85px]"
                             >
                                 Connect on LinkedIn
                             </Link>
@@ -59,14 +60,19 @@ export default function Footer({ variant = "achievements" }: FooterProps) {
                             const Icon = social.icon;
 
                             return (
-                                <Link
-                                    key={social.label}
-                                    href={social.href}
-                                    aria-label={social.label}
-                                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.02] text-text-body/75 transition hover:border-pink/40 hover:bg-white/5 hover:text-pink"
-                                >
-                                    <Icon aria-hidden="true" className="h-4 w-4" />
-                                </Link>
+                                <span key={social.label} className="group relative">
+                                    <Link
+                                        href={social.href}
+                                        aria-label={social.label}
+                                        className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.02] text-text-body/75 transition hover:border-pink/40 hover:bg-white/5 hover:text-pink"
+                                    >
+                                        <Icon aria-hidden="true" className="h-4 w-4" />
+                                    </Link>
+
+                                    <span className="pointer-events-none absolute left-1/2 top-[-2.5rem] -translate-x-1/2 rounded-full border border-white/10 bg-black/90 px-3 py-1 font-ui text-[0.7rem] uppercase tracking-[0.2em] text-text-body opacity-0 shadow-[0_10px_24px_rgba(0,0,0,0.35)] transition duration-200 group-hover:opacity-100 group-focus-within:opacity-100">
+                                        {social.tooltip}
+                                    </span>
+                                </span>
                             );
                         })}
                     </div>
