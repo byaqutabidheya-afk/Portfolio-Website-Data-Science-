@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           type: "circle"
         },
         opacity: {
-          value: { min: 0.3, max: 0.6 }
+          value: { min: 0.8, max: 0.8 }
         },
         size: {
           value: { min: 1, max: 2.5 }
