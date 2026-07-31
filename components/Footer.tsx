@@ -4,7 +4,11 @@ import { ExternalLink, FolderGit, Mail } from "lucide-react";
 const socialLinks = [
     { label: "GitHub", href: "https://github.com/", icon: FolderGit },
     { label: "LinkedIn", href: "https://www.linkedin.com/", icon: ExternalLink },
-    { label: "Email", href: "mailto:hello@example.com", icon: Mail },
+    {
+        label: "Email",
+        href: "https://mail.google.com/mail/?view=cm&fs=1&to=byaqutabidheya@gmail.com",
+        icon: Mail,
+    },
 ];
 
 type FooterProps = {
