@@ -3,7 +3,7 @@ import { ExternalLink, FolderGit, Mail } from "lucide-react";
 import AchievementsSection from "./AchievementsSection";
 
 const socialLinks = [
-    { label: "GitHub", tooltip: "GitHub", href: "https://github.com/", icon: FolderGit },
+    { label: "GitHub", tooltip: "GitHub", href: "https://github.com/byaqutabidheya-afk", icon: FolderGit },
     { label: "LinkedIn", tooltip: "LinkedIn", href: "https://www.linkedin.com/", icon: ExternalLink },
     {
         label: "Email",
@@ -66,6 +66,8 @@ export default function Footer({ variant = "achievements" }: FooterProps) {
                                     <Link
                                         href={social.href}
                                         aria-label={social.label}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.02] text-text-body/75 transition hover:border-pink/40 hover:bg-white/5 hover:text-pink"
                                     >
                                         <Icon aria-hidden="true" className="h-4 w-4" />
