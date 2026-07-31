@@ -3,17 +3,19 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Quote, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useId, useState } from "react";
 
 const navItems = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
-    { label: "CV", href: "/cv.pdf" },
+    { label: "CV", href: "/cv" },
 ];
 
 export default function Nav() {
     const [isMottoOpen, setIsMottoOpen] = useState(false);
     const popupTitleId = useId();
+    const pathname = usePathname();
 
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
@@ -44,15 +46,22 @@ export default function Nav() {
                 </button>
 
                 <div className="flex flex-wrap items-center justify-end gap-3 text-sm font-medium text-text-body sm:gap-4 lg:gap-5">
-                    {navItems.map((item) => (
-                        <Link
-                            key={item.label}
-                            href={item.href}
-                            className="rounded-full border border-white/10 px-4 py-2 font-ui transition hover:border-pink/60 hover:bg-white/5 hover:text-pink sm:px-5"
-                        >
-                            {item.label}
-                        </Link>
-                    ))}
+                    {navItems.map((item) => {
+                        const isActive = pathname === item.href;
+                        return (
+                            <Link
+                                key={item.label}
+                                href={item.href}
+                                className={`rounded-full border px-4 py-2 font-ui transition sm:px-5 ${
+                                    isActive
+                                        ? "border-mint/50 bg-mint/10 text-mint"
+                                        : "border-white/10 hover:border-pink/60 hover:bg-white/5 hover:text-pink"
+                                }`}
+                            >
+                                {item.label}
+                            </Link>
+                        );
+                    })}
                 </div>
             </nav>
 

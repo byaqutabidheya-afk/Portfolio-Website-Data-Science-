@@ -77,7 +77,7 @@ export default function Footer({ variant = "achievements" }: FooterProps) {
                                         aria-label={social.label}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.02] text-text-body/75 transition hover:border-pink/40 hover:bg-white/5 hover:text-pink"
+                                        className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-purple/30 bg-purple/10 text-purple transition hover:bg-purple/20 hover:border-purple/60 hover:scale-110 active:scale-95"
                                     >
                                         <Icon aria-hidden="true" className="h-4 w-4" />
                                     </Link>
