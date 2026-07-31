@@ -2,21 +2,21 @@ import { BookOpen, Compass, Rocket } from "lucide-react";
 
 const cards = [
     {
-        title: "What I'm studying",
+        title: "What I'm studying?",
         description:
-            "I'm currently focused on Computer Science fundamentals, web development, and the practical side of building useful software. I like learning topics that connect directly to projects I can actually make and improve.",
+            "Hey! I'm a BTech Computer Science student diving deep into Data Science and AI/ML. I love figuring out how machines can make sense of messy, real-world data — and honestly, I just find the whole field endlessly fascinating. Outside of coursework, I'm the kind of person who'll randomly go down a rabbit hole comparing car models or rereading Kafka, so curiosity is pretty much my default mode. I'm gearing up to get some real industry experience next, with an eye on eventually building my own startup someday.",
         icon: BookOpen,
     },
     {
-        title: "What drives me",
+        title: "What drives me?",
         description:
-            "I enjoy turning ideas into real things, especially when they help people solve everyday problems or understand something more clearly. Curiosity, iteration, and steady progress keep me moving forward.",
+            "What drives me is a genuine curiosity about how things work — and a restlessness to build something that matters. I'm endlessly fascinated by the way data and intelligent systems can turn noise into insight, and that fascination pushes me to keep learning, keep experimenting, keep asking \"what if?\" I don't just want to study technology — I want to wield it, to eventually build something of my own that solves a real problem for real people. Every line of code, every dataset I dig into, every rabbit hole I fall down is a small step toward that bigger vision. I'm not chasing perfection right now — I'm chasing momentum, experience, and the kind of hands-on growth that turns ambition into ability. The startup I'll build someday isn't a distant dream to me; it's the destination I'm already walking toward, one skill at a time.",
         icon: Compass,
     },
     {
-        title: "What I'm building",
+        title: "What I'm building?",
         description:
-            "Right now I’m building a portfolio of class projects, personal experiments, and small tools that help me learn by doing. I want each project to show growth, not just the final result.",
+            "What I want to build isn't tied to a single idea yet — it's tied to a feeling. I want to create something that takes a real, everyday problem and makes it simpler, smarter, or just better using technology. I'm drawn to the intersection of data, intelligence, and impact — building tools that don't just look impressive on paper but actually change how people work, decide, or live. Right now, I'm in the phase of learning deeply, exploring widely, and gathering the skills and experience I'll need to eventually take that leap. But the destination is clear in my head: a startup born out of curiosity, built with purpose, and driven by the belief that good technology should quietly make life easier for the people who use it.",
         icon: Rocket,
     },
 ];

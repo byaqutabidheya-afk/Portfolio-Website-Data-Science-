@@ -16,6 +16,9 @@ export default function AboutHero() {
                         className="object-cover opacity-50"
                     />
 
+                    {/* Vignette */}
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_70%_at_50%_50%,transparent_40%,rgba(10,10,10,0.7)_75%,rgba(10,10,10,0.95)_100%)]" />
+
                     {/* Deep vignette — fades into page bg at bottom */}
                     <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(10,10,10,0.95)_0%,rgba(10,10,10,0.3)_50%,rgba(10,10,10,0.55)_100%)]" />
 
