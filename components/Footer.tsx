@@ -42,7 +42,7 @@ export default function Footer({ variant = "achievements" }: FooterProps) {
                             </Link>
                             <Link
                                 href="https://www.linkedin.com/"
-                                className="inline-flex w-48 items-center justify-center rounded-full border border-white/20 px-6 py-3 font-ui text-sm font-medium text-text-body transition hover:border-pink/60 hover:bg-white/5 hover:text-pink sm:-translate-x-[85px]"
+                                className="inline-flex w-48 items-center justify-center rounded-full border border-white/20 px-6 py-3 font-ui text-sm font-medium text-text-body transition hover:border-pink/60 hover:bg-white/5 hover:text-pink sm:-translate-x-[93px]"
                             >
                                 Connect on LinkedIn
                             </Link>
