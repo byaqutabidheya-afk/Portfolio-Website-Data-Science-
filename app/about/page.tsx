@@ -5,7 +5,7 @@ import StoryTimeline from "@/components/StoryTimeline";
 
 export default function AboutPage() {
     return (
-        <main className="min-h-screen bg-background text-text-body">
+        <main className="min-h-screen text-text-body">
             <section className="py-24 sm:py-28 lg:py-32">
                 <AboutHero />
             </section>

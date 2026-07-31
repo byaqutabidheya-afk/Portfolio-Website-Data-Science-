@@ -1,0 +1,38 @@
+/* Reset & Page Setup */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #090909; /* Pure black background */
+  overflow-x: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #e5e5e5;
+}
+
+/* Fullscreen Particle Background Container */
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Always stays behind all website content */
+  pointer-events: auto; /* Enables mouse interactions like repulsion */
+}
+
+/* Content Layer */
+.content-container {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  pointer-events: none; /* Allows mouse events to pass through transparent areas to particles */
+}
+
+.content-container * {
+  pointer-events: auto; /* Restores interactivity for links, buttons, and text */
+}

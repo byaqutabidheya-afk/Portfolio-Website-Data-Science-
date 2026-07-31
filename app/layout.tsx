@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Anton, Fraunces, Inter } from "next/font/google";
 import "./globals.css";
+import MeshBackground from "@/components/MeshBackground";
 
 const anton = Anton({
   variable: "--font-display",
@@ -34,8 +35,7 @@ export default function RootLayout({
       className={`${anton.variable} ${fraunces.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="relative isolate min-h-full overflow-x-hidden bg-background font-ui text-text-body">
-        <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-0 bg-background" />
-        <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(circle_at_18%_18%,rgba(255,255,255,0.14)_0,rgba(255,255,255,0.14)_1px,transparent_1.5px),radial-gradient(circle_at_78%_28%,rgba(255,255,255,0.11)_0,rgba(255,255,255,0.11)_1px,transparent_1.5px),radial-gradient(circle_at_64%_72%,rgba(255,255,255,0.10)_0,rgba(255,255,255,0.10)_1px,transparent_1.5px),linear-gradient(26deg,transparent_46.8%,rgba(255,255,255,0.08)_47.8%,rgba(255,255,255,0.08)_48.4%,transparent_49.2%),linear-gradient(154deg,transparent_46.8%,rgba(255,255,255,0.07)_47.8%,rgba(255,255,255,0.07)_48.4%,transparent_49.2%),linear-gradient(92deg,transparent_47.2%,rgba(255,255,255,0.05)_48.1%,rgba(255,255,255,0.05)_48.7%,transparent_49.5%),radial-gradient(circle_at_32%_30%,rgba(167,139,250,0.08),transparent_42%),radial-gradient(circle_at_70%_24%,rgba(245,197,229,0.07),transparent_40%),radial-gradient(circle_at_52%_64%,rgba(197,245,213,0.06),transparent_45%)] bg-[length:260px_260px,280px_280px,320px_320px,240px_240px,240px_240px,300px_300px,100%_100%,100%_100%,100%_100%] opacity-55" />
+        <MeshBackground />
         <div className="relative z-10 flex min-h-full flex-col">
           {children}
         </div>

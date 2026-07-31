@@ -168,7 +168,7 @@ export default function AchievementsSection() {
                         <ChevronLeft aria-hidden="true" className="h-5 w-5" />
                     </button>
 
-                    <div className="order-1 relative flex min-h-[22rem] items-center justify-center overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.03] px-4 py-8 shadow-[0_18px_60px_rgba(0,0,0,0.18)] sm:px-8 md:order-2 md:translate-x-[30px]">
+                    <div className="order-1 relative flex min-h-[22rem] items-center justify-center overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.03] px-4 py-8 shadow-[0_18px_60px_rgba(0,0,0,0.18)] sm:px-8 md:order-2 md:translate-x-0">
                         <AnimatePresence mode="wait" custom={direction}>
                             <motion.div
                                 key={currentIndex}
@@ -214,7 +214,7 @@ export default function AchievementsSection() {
                     </button>
                 </div>
 
-                <div className="mt-8 flex justify-center gap-2 md:translate-x-[35px]">
+                <div className="mt-8 flex justify-center gap-2 md:translate-x-[15px]">
                     {achievements.map((achievement, index) => (
                         <span
                             key={achievement.id}
