@@ -38,8 +38,8 @@ export default function ProjectsSection() {
                         Select Projects
                     </h2>
                     <p className="mt-4 font-body text-lg leading-8 text-text-body/80 sm:text-xl">
-                        A few things I've built — class projects, personal builds, and things
-                        I'm proud of.
+                        A few things I&apos;ve built — class projects, personal builds, and things
+                        I&apos;m proud of.
                     </p>
                 </div>
 

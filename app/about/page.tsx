@@ -19,7 +19,7 @@ export default function AboutPage() {
             </section>
 
             <section className="py-24 sm:py-28 lg:py-32">
-                <Footer shiftLinkedInCta />
+                <Footer variant="connect" />
             </section>
         </main>
     );
