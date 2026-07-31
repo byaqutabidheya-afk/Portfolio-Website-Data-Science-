@@ -6,7 +6,7 @@ type CampusPhoto = {
 };
 
 const photos: CampusPhoto[] = [
-    { src: "/images/campus1.jpg", caption: "Hackathon weekend" },
+    { src: "/images/campus1.jpg", caption: "My University (DRIEMS UNI)" },
     { src: "/images/campus2.jpg", caption: "Coding club meetup" },
     { src: "/images/campus3.jpg", caption: "Late-night study session" },
     { src: "/images/campus4.jpg", caption: "Campus event or workshop" },
@@ -38,6 +38,7 @@ export default function CampusLife() {
                                     src={photo.src}
                                     alt={photo.caption}
                                     fill
+                                    unoptimized
                                     className="object-cover transition duration-500 group-hover:scale-[1.03]"
                                 />
                             </div>

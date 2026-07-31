@@ -7,44 +7,63 @@ import CurrentlyLearning from "@/components/CurrentlyLearning";
 import SkillsGrid from "@/components/SkillsGrid";
 import CampusLife from "@/components/CampusLife";
 import Footer from "@/components/Footer";
+import FadeIn from "@/components/FadeIn";
 
 export default function Home() {
   return (
     <main className="min-h-screen text-text-body">
       <section>
-        <Nav />
+        <FadeIn>
+          <Nav />
+        </FadeIn>
       </section>
 
       <section className="py-24 sm:py-28 lg:py-32">
-        <Hero />
+        <FadeIn>
+          <Hero />
+        </FadeIn>
       </section>
 
       <section className="py-24 sm:py-28 lg:py-32">
-        <IntroSplit />
+        <FadeIn>
+          <IntroSplit />
+        </FadeIn>
       </section>
 
       <section className="py-24 sm:py-28 lg:py-32">
-        <Timeline />
+        <FadeIn>
+          <Timeline />
+        </FadeIn>
       </section>
 
       <section className="py-24 sm:py-28 lg:py-32">
-        <ProjectsSection />
+        <FadeIn>
+          <ProjectsSection />
+        </FadeIn>
       </section>
 
       <section className="py-24 sm:py-28 lg:py-32">
-        <CurrentlyLearning />
+        <FadeIn>
+          <CurrentlyLearning />
+        </FadeIn>
       </section>
 
       <section className="py-24 sm:py-28 lg:py-32">
-        <SkillsGrid />
+        <FadeIn>
+          <SkillsGrid />
+        </FadeIn>
       </section>
 
       <section className="py-24 sm:py-28 lg:py-32">
-        <CampusLife />
+        <FadeIn>
+          <CampusLife />
+        </FadeIn>
       </section>
 
       <section className="py-24 sm:py-28 lg:py-32">
-        <Footer />
+        <FadeIn>
+          <Footer />
+        </FadeIn>
       </section>
     </main>
   );

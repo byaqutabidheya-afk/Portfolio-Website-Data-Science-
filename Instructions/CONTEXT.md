@@ -21,6 +21,6 @@ Update this section yourself as you progress, so any AI tool that picks up the p
 - [ ] Step 4–5: DESIGN.md/STYLE_GUIDE.md written, fonts + colors wired into tailwind.config.ts
 - [ ] Step 6: Home page components built
 - [ ] Step 7: About page components built
-- [ ] Step 8: Scroll animations added
+- [x] Step 8: Scroll animations added
 - [ ] Step 9: Placeholder content replaced with real content
 - [ ] Step 10–12: Tested, pushed to GitHub, deployed to Vercel

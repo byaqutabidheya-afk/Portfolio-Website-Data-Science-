@@ -10,6 +10,7 @@ export default function AboutHero() {
                         alt="About hero background"
                         fill
                         priority
+                        unoptimized
                         className="object-cover"
                     />
 
