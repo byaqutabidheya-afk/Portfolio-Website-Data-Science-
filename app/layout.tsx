@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Anton, Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import MeshBackground from "@/components/MeshBackground";
+import SplashScreen from "@/components/SplashScreen";
 
 const anton = Anton({
   variable: "--font-display",
@@ -35,6 +36,7 @@ export default function RootLayout({
       className={`${anton.variable} ${fraunces.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="relative isolate min-h-full overflow-x-hidden bg-background font-ui text-text-body">
+        <SplashScreen />
         <MeshBackground />
         <div className="relative z-10 flex min-h-full flex-col">
           {children}
