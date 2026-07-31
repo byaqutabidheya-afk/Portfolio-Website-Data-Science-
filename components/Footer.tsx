@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ExternalLink, FolderGit, Mail } from "lucide-react";
 import AchievementsSection from "./AchievementsSection";
+import WireframeGlobe from "./WireframeGlobe";
 
 const socialLinks = [
     { label: "GitHub", tooltip: "GitHub", href: "https://github.com/byaqutabidheya-afk", icon: FolderGit },
@@ -24,32 +25,40 @@ export default function Footer({ variant = "achievements" }: FooterProps) {
                 {variant === "achievements" ? (
                     <AchievementsSection />
                 ) : (
-                    <>
-                        <h2 className="font-display text-4xl uppercase tracking-[0.04em] text-pink sm:text-5xl lg:text-7xl">
-                            Let&apos;s Connect
-                        </h2>
-
-                        <p className="mt-4 max-w-2xl font-body text-lg leading-8 text-text-body/80 sm:text-xl lg:text-2xl">
-                            Open to internships, collaborations, and interesting conversations.
-                        </p>
-
-                        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:items-center sm:justify-center">
-                            <Link
-                                href="https://mail.google.com/mail/?view=cm&fs=1&to=byaqutabidheya@gmail.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex w-48 items-center justify-center rounded-full bg-purple px-6 py-3 font-ui text-sm font-medium text-black transition hover:bg-purple/90 hover:scale-[1.01]"
-                            >
-                                Get in touch
-                            </Link>
-                            <Link
-                                href="https://www.linkedin.com/"
-                                className="inline-flex w-48 items-center justify-center rounded-full border border-white/20 px-6 py-3 font-ui text-sm font-medium text-text-body transition hover:border-pink/60 hover:bg-white/5 hover:text-pink"
-                            >
-                                Connect on LinkedIn
-                            </Link>
+                    <div className="relative w-full flex flex-col items-center pb-64 sm:pb-72">
+                        {/* Globe in background */}
+                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none -z-0">
+                            <WireframeGlobe />
                         </div>
-                    </>
+
+                        {/* Content in front */}
+                        <div className="relative z-10 flex flex-col items-center">
+                            <h2 className="font-display text-4xl uppercase tracking-[0.04em] text-pink sm:text-5xl lg:text-7xl">
+                                Let&apos;s Connect
+                            </h2>
+
+                            <p className="mt-4 max-w-2xl font-body text-lg leading-8 text-text-body/80 sm:text-xl lg:text-2xl">
+                                Open to internships, collaborations, and interesting conversations.
+                            </p>
+
+                            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:items-center sm:justify-center">
+                                <Link
+                                    href="https://mail.google.com/mail/?view=cm&fs=1&to=byaqutabidheya@gmail.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex w-48 items-center justify-center rounded-full bg-purple px-6 py-3 font-ui text-sm font-medium text-black transition hover:bg-purple/90 hover:scale-[1.01]"
+                                >
+                                    Get in touch
+                                </Link>
+                                <Link
+                                    href="https://www.linkedin.com/"
+                                    className="inline-flex w-48 items-center justify-center rounded-full border border-white/20 px-6 py-3 font-ui text-sm font-medium text-text-body transition hover:border-pink/60 hover:bg-white/5 hover:text-pink"
+                                >
+                                    Connect on LinkedIn
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
                 )}
 
                 <div className="mt-12 flex w-full flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row sm:pt-8">
