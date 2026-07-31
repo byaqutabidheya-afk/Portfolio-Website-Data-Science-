@@ -30,7 +30,7 @@ export default function Hero() {
                     </Link>
                     <Link
                         href="/resume.pdf"
-                        className="inline-flex w-44 items-center justify-center rounded-full border border-white/20 px-6 py-3 font-ui text-sm font-medium text-text-body transition hover:border-pink/60 hover:bg-white/5 hover:text-pink sm:-translate-x-[84px]"
+                        className="inline-flex w-44 items-center justify-center rounded-full border border-white/20 px-6 py-3 font-ui text-sm font-medium text-text-body transition hover:border-pink/60 hover:bg-white/5 hover:text-pink sm:-translate-x-[94px]"
                     >
                         View my resume
                     </Link>
