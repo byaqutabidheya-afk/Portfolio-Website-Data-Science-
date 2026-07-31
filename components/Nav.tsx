@@ -18,7 +18,7 @@ export default function Nav() {
                     href="/"
                     className="font-ui text-sm font-medium tracking-[0.25em] text-mint uppercase transition hover:text-pink"
                 >
-                    Your Name
+                    BYAQUTA BIDHEYA BEHERA
                 </Link>
 
                 <div className="flex flex-wrap items-center justify-end gap-2 text-sm font-medium text-text-body sm:gap-3">

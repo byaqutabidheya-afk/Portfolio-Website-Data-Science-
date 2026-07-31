@@ -19,16 +19,16 @@ export default function Footer() {
                     Open to internships, collaborations, and interesting conversations.
                 </p>
 
-                <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:items-center sm:justify-center">
                     <Link
                         href="mailto:hello@example.com"
-                        className="inline-flex items-center justify-center rounded-full bg-purple px-6 py-3 font-ui text-sm font-medium text-black transition hover:bg-purple/90 hover:scale-[1.01]"
+                        className="inline-flex w-48 items-center justify-center rounded-full bg-purple px-6 py-3 font-ui text-sm font-medium text-black transition hover:bg-purple/90 hover:scale-[1.01]"
                     >
                         Get in touch
                     </Link>
                     <Link
                         href="https://www.linkedin.com/"
-                        className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 font-ui text-sm font-medium text-text-body transition hover:border-pink/60 hover:bg-white/5 hover:text-pink"
+                        className="inline-flex w-48 items-center justify-center rounded-full border border-white/20 px-6 py-3 font-ui text-sm font-medium text-text-body transition hover:border-pink/60 hover:bg-white/5 hover:text-pink"
                     >
                         Connect on LinkedIn
                     </Link>
@@ -36,7 +36,7 @@ export default function Footer() {
 
                 <div className="mt-12 flex w-full flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row sm:pt-8">
                     <p className="font-ui text-xs uppercase tracking-[0.24em] text-text-body/55 sm:text-sm">
-                        © 2026 Your Name. All rights reserved.
+                        © 2026 BYAQUTA BIDHEYA BEHERA. All rights reserved.
                     </p>
 
                     <div className="flex items-center gap-2">

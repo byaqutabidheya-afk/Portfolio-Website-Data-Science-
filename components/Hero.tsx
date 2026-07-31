@@ -11,26 +11,26 @@ export default function Hero() {
             </div>
 
             <div className="relative mx-auto flex w-full max-w-6xl flex-col items-center gap-8 pt-10 text-center sm:pt-14 lg:gap-10 lg:pt-24">
-                <div className="w-full">
-                    <h1 className="font-display text-[clamp(1.9rem,7.5vw,10rem)] leading-none tracking-[-0.03em] text-mint uppercase whitespace-nowrap text-center">
+                <div className="w-full flex justify-center">
+                    <h1 className="font-display text-[clamp(1.25rem,4.8vw,5.25rem)] leading-none tracking-[-0.02em] text-mint uppercase whitespace-nowrap text-center">
                         BYAQUTA BIDHEYA BEHERA
                     </h1>
                 </div>
 
                 <p className="max-w-2xl font-body text-lg leading-8 text-text-body/85 sm:text-xl lg:text-2xl lg:leading-9">
-                    Computer Science student building things and learning as I go.
+                    Computer Science student building things and learning as I  go.
                 </p>
 
-                <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-1">
                     <Link
                         href="mailto:hello@example.com"
-                        className="inline-flex items-center justify-center rounded-full bg-purple px-6 py-3 font-ui text-sm font-medium text-black transition hover:bg-purple/90 hover:scale-[1.01]"
+                        className="inline-flex w-44 items-center justify-center rounded-full bg-purple px-6 py-3 font-ui text-sm font-medium text-black transition hover:bg-purple/90 hover:scale-[1.01]"
                     >
                         Get in touch
                     </Link>
                     <Link
                         href="/resume.pdf"
-                        className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 font-ui text-sm font-medium text-text-body transition hover:border-pink/60 hover:bg-white/5 hover:text-pink"
+                        className="inline-flex w-44 items-center justify-center rounded-full border border-white/20 px-6 py-3 font-ui text-sm font-medium text-text-body transition hover:border-pink/60 hover:bg-white/5 hover:text-pink sm:-translate-x-[84px]"
                     >
                         View my resume
                     </Link>
