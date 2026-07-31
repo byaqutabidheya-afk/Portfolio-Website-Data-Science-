@@ -35,14 +35,16 @@ export default function Footer({ variant = "achievements" }: FooterProps) {
 
                         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:items-center sm:justify-center">
                             <Link
-                                href="mailto:hello@example.com"
+                                href="https://mail.google.com/mail/?view=cm&fs=1&to=byaqutabidheya@gmail.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="inline-flex w-48 items-center justify-center rounded-full bg-purple px-6 py-3 font-ui text-sm font-medium text-black transition hover:bg-purple/90 hover:scale-[1.01]"
                             >
                                 Get in touch
                             </Link>
                             <Link
                                 href="https://www.linkedin.com/"
-                                className="inline-flex w-48 items-center justify-center rounded-full border border-white/20 px-6 py-3 font-ui text-sm font-medium text-text-body transition hover:border-pink/60 hover:bg-white/5 hover:text-pink sm:-translate-x-[93px]"
+                                className="inline-flex w-48 items-center justify-center rounded-full border border-white/20 px-6 py-3 font-ui text-sm font-medium text-text-body transition hover:border-pink/60 hover:bg-white/5 hover:text-pink"
                             >
                                 Connect on LinkedIn
                             </Link>

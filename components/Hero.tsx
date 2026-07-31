@@ -23,14 +23,16 @@ export default function Hero() {
 
                 <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-1">
                     <Link
-                        href="mailto:hello@example.com"
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=byaqutabidheya@gmail.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex w-44 items-center justify-center rounded-full bg-purple px-6 py-3 font-ui text-sm font-medium text-black transition hover:bg-purple/90 hover:scale-[1.01]"
                     >
                         Get in touch
                     </Link>
                     <Link
                         href="/resume.pdf"
-                        className="inline-flex w-44 items-center justify-center rounded-full border border-white/20 px-6 py-3 font-ui text-sm font-medium text-text-body transition hover:border-pink/60 hover:bg-white/5 hover:text-pink sm:-translate-x-[94px]"
+                        className="inline-flex w-44 items-center justify-center rounded-full border border-white/20 px-6 py-3 font-ui text-sm font-medium text-text-body transition hover:border-pink/60 hover:bg-white/5 hover:text-pink"
                     >
                         View my resume
                     </Link>
