@@ -11,7 +11,7 @@ export default function AboutHero() {
                         fill
                         priority
                         unoptimized
-                        className="object-cover"
+                        className="object-cover opacity-70"
                     />
 
                     <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(10,10,10,0.72),rgba(10,10,10,0.18)_50%,rgba(10,10,10,0.46))]" />

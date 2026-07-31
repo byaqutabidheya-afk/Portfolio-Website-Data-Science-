@@ -1,42 +1,62 @@
 import {
-    Braces,
-    Code2,
+    Brain,
+    BrainCircuit,
+    BrainCog,
+    Box,
+    ChartLine,
+    ChartNoAxesCombined,
+    ChartSpline,
+    Cloud,
     Database,
     GitBranch,
-    LayoutGrid,
-    Palette,
-    PenTool,
     TerminalSquare,
+    NotebookPen,
+    Sigma,
+    Table2,
+    Zap,
     type LucideIcon,
 } from "lucide-react";
 
 type SkillItem = {
     name: string;
     icon: keyof typeof iconMap;
+    description: string;
 };
 
 const iconMap = {
-    Code2,
-    Braces,
+    Brain,
+    BrainCircuit,
+    BrainCog,
+    Box,
+    ChartLine,
+    ChartNoAxesCombined,
+    ChartSpline,
+    Cloud,
     Database,
     GitBranch,
-    LayoutGrid,
-    Palette,
-    PenTool,
     TerminalSquare,
+    NotebookPen,
+    Sigma,
+    Table2,
+    Zap,
 } satisfies Record<string, LucideIcon>;
 
 const skills: SkillItem[] = [
-    { name: "JavaScript", icon: "Code2" },
-    { name: "Python", icon: "TerminalSquare" },
-    { name: "React", icon: "Braces" },
-    { name: "Next.js", icon: "LayoutGrid" },
-    { name: "Tailwind CSS", icon: "Palette" },
-    { name: "Git & GitHub", icon: "GitBranch" },
-    { name: "Figma", icon: "PenTool" },
-    { name: "SQL", icon: "Database" },
-    { name: "TypeScript", icon: "Code2" },
-    { name: "VS Code", icon: "Code2" },
+    { name: "Python", icon: "TerminalSquare", description: "Core language for data and AI." },
+    { name: "SQL", icon: "Database", description: "Querying and managing structured data." },
+    { name: "Pandas", icon: "Table2", description: "Data cleaning and analysis workflows." },
+    { name: "NumPy", icon: "Sigma", description: "Fast numerical computing with arrays." },
+    { name: "Matplotlib", icon: "ChartLine", description: "Clear, customizable data visualizations." },
+    { name: "Seaborn", icon: "ChartSpline", description: "Statistical visualizations with Python." },
+    { name: "Scikit-learn", icon: "BrainCircuit", description: "Machine-learning models and evaluation." },
+    { name: "TensorFlow", icon: "BrainCog", description: "Building and training deep-learning models." },
+    { name: "PyTorch", icon: "Brain", description: "Flexible deep-learning experimentation." },
+    { name: "Jupyter Notebook", icon: "NotebookPen", description: "Interactive analysis and experimentation." },
+    { name: "Git & GitHub", icon: "GitBranch", description: "Version control and project collaboration." },
+    { name: "Docker", icon: "Box", description: "Containerizing reproducible applications." },
+    { name: "Apache Spark", icon: "Zap", description: "Distributed processing for large datasets." },
+    { name: "AWS (or Azure/GCP)", icon: "Cloud", description: "Cloud services for data and deployment." },
+    { name: "Tableau (or Power BI)", icon: "ChartNoAxesCombined", description: "Dashboards for actionable insights." },
 ];
 
 export default function SkillsGrid() {
@@ -68,7 +88,7 @@ export default function SkillsGrid() {
                                             {skill.name}
                                         </h3>
                                         <p className="mt-1 font-body text-sm leading-6 text-text-body/65">
-                                            Tool or technology I use while building.
+                                            {skill.description}
                                         </p>
                                     </div>
                                 </div>
