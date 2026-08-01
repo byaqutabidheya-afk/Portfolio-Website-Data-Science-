@@ -37,7 +37,9 @@ export default function RootLayout({
     >
       <body className="relative isolate min-h-full overflow-x-hidden bg-background font-ui text-text-body">
         <SplashScreen />
-        <MeshBackground />
+        <div className="print:hidden" aria-hidden="true">
+          <MeshBackground />
+        </div>
         <div className="relative z-10 flex min-h-full flex-col">
           {children}
         </div>

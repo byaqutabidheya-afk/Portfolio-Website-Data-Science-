@@ -19,3 +19,100 @@ body {
   color: #e5e5e5;
   font-family: var(--font-ui), sans-serif;
 }
+
+@media print {
+  /* Page setup */
+  @page {
+    margin: 1.5cm 1.8cm;
+    size: A4 portrait;
+  }
+
+  /* Hide fixed/absolute overlays: mesh background canvas, splash screen */
+  canvas,
+  [style*="position: fixed"],
+  [style*="position:fixed"] {
+    display: none !important;
+  }
+
+  /* Hide nav, footer, print button */
+  nav,
+  footer,
+  header,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  /* Reset page stacking — remove isolate/z-index that hides content */
+  body {
+    background: white !important;
+    color: #111 !important;
+    isolation: auto !important;
+    overflow: visible !important;
+  }
+
+  /* The z-10 content wrapper — make it just normal flow */
+  body > * {
+    position: static !important;
+    z-index: auto !important;
+    background: white !important;
+  }
+
+  main {
+    min-height: unset !important;
+    background: white !important;
+  }
+
+  /* Force white background and black text throughout */
+  *,
+  *::before,
+  *::after {
+    background: white !important;
+    color: #111 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    /* Override any Framer Motion inline opacity/transform */
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Remove the outer section padding */
+  main > section {
+    padding: 0 !important;
+  }
+
+  /* CV card: remove rounded border chrome */
+  .rounded-\[2rem\] {
+    border-radius: 0 !important;
+    border: none !important;
+  }
+
+  /* Keep inner card borders subtle */
+  .rounded-\[1\.25rem\] {
+    border-radius: 4px !important;
+    border-color: #ccc !important;
+    break-inside: avoid;
+  }
+
+  section {
+    break-inside: avoid;
+  }
+
+  /* Accent colors readable on white */
+  .text-mint   { color: #1a7a45 !important; }
+  .text-pink   { color: #b0306a !important; }
+  .text-purple { color: #6d3fc4 !important; }
+
+  /* Period badges */
+  [class*="bg-purple\/"] {
+    background: #ede9ff !important;
+  }
+
+  /* Skill chips */
+  [class*="bg-black"] {
+    background: #f5f5f5 !important;
+  }
+}
