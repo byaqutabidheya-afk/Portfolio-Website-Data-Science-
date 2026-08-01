@@ -169,6 +169,10 @@ export default function AchievementsSection() {
                     </button>
 
                     <div className="order-1 relative flex min-h-[22rem] items-center justify-center overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.03] px-4 py-8 shadow-[0_18px_60px_rgba(0,0,0,0.18)] sm:px-8 md:order-2 md:translate-x-0">
+                        <div
+                            aria-hidden="true"
+                            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--color-purple),transparent_65%)] opacity-30"
+                        />
                         <AnimatePresence mode="wait" custom={direction}>
                             <motion.div
                                 key={currentIndex}
@@ -181,7 +185,7 @@ export default function AchievementsSection() {
                                     x: { type: "tween", duration: 0.35, ease: "easeOut" },
                                     opacity: { duration: 0.25 },
                                 }}
-                                className="w-full max-w-2xl"
+                                className="relative z-10 w-full max-w-2xl"
                             >
                                 <div className="flex flex-col items-center text-center">
                                     <span className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-black/50 text-mint">

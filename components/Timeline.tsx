@@ -98,13 +98,17 @@ export default function Timeline() {
                         return (
                             <motion.article
                                 key={item.year}
-                                className="grid gap-4 rounded-2xl border border-white/[0.08] bg-white/[0.03] px-5 py-6 shadow-[0_8px_30px_rgba(0,0,0,0.25)] transition-all duration-300 ease-out hover:-translate-y-[3px] hover:border-white/20 sm:px-6 lg:grid-cols-[auto_1fr] lg:items-start lg:gap-6 lg:px-8"
+                                className="relative grid gap-4 overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.03] px-5 py-6 shadow-[0_8px_30px_rgba(0,0,0,0.25)] transition-all duration-300 ease-out hover:-translate-y-[3px] hover:border-white/20 sm:px-6 lg:grid-cols-[auto_1fr] lg:items-start lg:gap-6 lg:px-8"
                                 initial={{ opacity: 0, y: 24 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, amount: 0.35 }}
                                 transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.05 }}
                             >
-                                <div className="flex items-center gap-4 lg:flex-col lg:items-end lg:gap-3 lg:pt-1">
+                                <div
+                                    aria-hidden="true"
+                                    className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--color-purple),transparent_65%)] opacity-30"
+                                />
+                                <div className="relative z-10 flex items-center gap-4 lg:flex-col lg:items-end lg:gap-3 lg:pt-1">
                                     <span className="font-display text-4xl leading-none text-purple sm:text-5xl lg:text-6xl">
                                         {item.year}
                                     </span>
@@ -113,7 +117,7 @@ export default function Timeline() {
                                     </span>
                                 </div>
 
-                                <div className="max-w-2xl lg:justify-self-end lg:text-right">
+                                <div className="relative z-10 max-w-2xl lg:justify-self-end lg:text-right">
                                     <span className="inline-flex rounded-full border border-purple/40 bg-purple/10 px-3 py-1 font-ui text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-purple">
                                         {item.category}
                                     </span>

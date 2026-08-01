@@ -50,9 +50,13 @@ export default function ProjectsSection() {
                         return (
                             <article
                                 key={project.title}
-                                className="grid gap-6 rounded-[2rem] border border-white/10 bg-white/[0.02] p-4 shadow-[0_20px_70px_rgba(0,0,0,0.18)] sm:p-6 lg:grid-cols-2 lg:items-center lg:gap-10 lg:p-8"
+                                className="relative grid gap-6 overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.02] p-4 shadow-[0_20px_70px_rgba(0,0,0,0.18)] sm:p-6 lg:grid-cols-2 lg:items-center lg:gap-10 lg:p-8"
                             >
-                                <div className={isImageLeft ? "order-1" : "order-1 lg:order-2"}>
+                                <div
+                                    aria-hidden="true"
+                                    className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--color-purple),transparent_65%)] opacity-30"
+                                />
+                                <div className={isImageLeft ? "order-1 relative z-10" : "order-1 relative z-10 lg:order-2"}>
                                     <div className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#141414]">
                                         <Image
                                             src={project.image}
@@ -67,8 +71,8 @@ export default function ProjectsSection() {
                                 <div
                                     className={
                                         isImageLeft
-                                            ? "order-2 lg:order-2 lg:pl-4"
-                                            : "order-2 lg:order-1 lg:pr-4"
+                                            ? "relative z-10 order-2 lg:order-2 lg:pl-4"
+                                            : "relative z-10 order-2 lg:order-1 lg:pr-4"
                                     }
                                 >
                                     <h3 className="font-display text-3xl uppercase tracking-[0.04em] text-pink sm:text-4xl lg:text-5xl">
