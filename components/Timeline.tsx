@@ -1,7 +1,9 @@
 "use client";
 
+import { Fragment } from "react";
 import {
     Briefcase,
+    ChevronDown,
     Code2,
     GraduationCap,
     Rocket,
@@ -91,24 +93,24 @@ export default function Timeline() {
     return (
         <section className="px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
             <div className="mx-auto w-full max-w-5xl">
-                <div className="space-y-6 sm:space-y-8">
+                <div className="relative flex flex-col gap-8 sm:gap-12">
                     {timelineData.map((item, index) => {
                         const Icon = iconMap[item.icon];
 
                         return (
-                            <motion.article
-                                key={item.year}
-                                className="relative grid gap-4 overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.03] px-5 py-6 shadow-[0_8px_30px_rgba(0,0,0,0.25)] transition-all duration-300 ease-out hover:-translate-y-[3px] hover:border-white/20 sm:px-6 lg:grid-cols-[auto_1fr] lg:items-start lg:gap-6 lg:px-8"
-                                initial={{ opacity: 0, y: 24 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, amount: 0.35 }}
-                                transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.05 }}
-                            >
-                                <div
-                                    aria-hidden="true"
-                                    className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--color-purple),transparent_65%)] opacity-30"
-                                />
-                                <div className="relative z-10 flex items-center gap-4 lg:flex-col lg:items-end lg:gap-3 lg:pt-1">
+                            <Fragment key={item.year}>
+                                <motion.article
+                                    className="relative grid gap-4 overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.03] px-5 py-6 shadow-[0_8px_30px_rgba(0,0,0,0.25)] transition-all duration-300 ease-out hover:-translate-y-[3px] hover:border-white/20 sm:px-6 lg:grid-cols-[auto_1fr] lg:items-start lg:gap-6 lg:px-8"
+                                    initial={{ opacity: 0, y: 24 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, amount: 0.35 }}
+                                    transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.05 }}
+                                >
+                                    <span
+                                        aria-hidden="true"
+                                        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--color-purple),transparent_65%)] opacity-30"
+                                    />
+                                    <div className="relative z-10 flex items-center gap-4 lg:flex-col lg:items-end lg:gap-3 lg:pt-1">
                                     <span className="font-display text-4xl leading-none text-purple sm:text-5xl lg:text-6xl">
                                         {item.year}
                                     </span>
@@ -148,8 +150,22 @@ export default function Timeline() {
                                             </span>
                                         ))}
                                     </div>
-                                </div>
-                            </motion.article>
+                                    </div>
+                                </motion.article>
+
+                                {index < timelineData.length - 1 && (
+                                    <div
+                                        aria-hidden="true"
+                                        className="mx-auto flex h-16 w-[3px] flex-col items-center justify-start"
+                                    >
+                                        <div className="h-11 w-[3px] bg-gradient-to-b from-mint to-mint/50" />
+                                        <ChevronDown
+                                            className="-mt-0.5 h-6 w-6 stroke-[2.5] text-mint drop-shadow-[0_0_10px_rgba(197,245,213,0.8)]"
+                                            strokeWidth={2.5}
+                                        />
+                                    </div>
+                                )}
+                            </Fragment>
                         );
                     })}
                 </div>

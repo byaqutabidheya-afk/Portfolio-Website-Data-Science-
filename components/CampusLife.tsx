@@ -11,6 +11,9 @@ const photos: CampusPhoto[] = [
     { src: "/images/campus3.jpg", caption: "Late-night study session" },
     { src: "/images/campus4.jpg", caption: "Campus event or workshop" },
     { src: "/images/campus5.jpg", caption: "Team project presentation" },
+    { src: "/images/campus6.svg", caption: "Hackathon night [Placeholder]" },
+    { src: "/images/campus7.svg", caption: "Sports day [Placeholder]" },
+    { src: "/images/campus8.svg", caption: "Tech fest [Placeholder]" },
 ];
 
 export default function CampusLife() {
@@ -26,12 +29,11 @@ export default function CampusLife() {
                     </p>
                 </div>
 
-                <div className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                    {photos.map((photo, index) => (
+                <div className="mt-10 grid grid-cols-2 gap-4 sm:mt-12 lg:grid-cols-4">
+                    {photos.map((photo) => (
                         <figure
                             key={photo.src}
-                            className={`group overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.02] shadow-[0_18px_60px_rgba(0,0,0,0.18)] ${index === 0 ? "lg:col-span-2 xl:col-span-2" : ""
-                                }`}
+                            className="group overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.02] shadow-[0_18px_60px_rgba(0,0,0,0.18)]"
                         >
                             <div className="relative aspect-[4/3] overflow-hidden">
                                 <Image

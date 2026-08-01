@@ -7,19 +7,13 @@ export default function SplashScreen() {
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
-        // Show once every 24 hours
-        const key = "splashLastShown";
-        const last = localStorage.getItem(key);
-        const now = Date.now();
-        const twentyFourHours = 24 * 60 * 60 * 1000;
+        const showTimer = setTimeout(() => setVisible(true), 0);
+        const hideTimer = setTimeout(() => setVisible(false), 3200);
 
-        if (last && now - parseInt(last) < twentyFourHours) return;
-
-        localStorage.setItem(key, String(now));
-        setVisible(true);
-
-        const timer = setTimeout(() => setVisible(false), 3200);
-        return () => clearTimeout(timer);
+        return () => {
+            clearTimeout(showTimer);
+            clearTimeout(hideTimer);
+        };
     }, []);
 
     return (
@@ -110,7 +104,7 @@ export default function SplashScreen() {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1.4, duration: 0.6 }}
                     >
-                        Sic Parvis Magna
+                        "Sic Parvis Magna"
                     </motion.p>
                 </motion.div>
             )}

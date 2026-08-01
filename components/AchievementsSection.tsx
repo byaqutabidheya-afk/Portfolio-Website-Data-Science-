@@ -148,7 +148,7 @@ export default function AchievementsSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.35 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="md:translate-x-[35px]"
+                    className="md:translate-x-[27px]"
                 >
                     <h2 className="font-display text-4xl uppercase tracking-[0.04em] text-mint sm:text-5xl lg:text-6xl">
                         Achievements
